@@ -22,8 +22,10 @@ const App = () => {
 
 
   return (
+    <center>
     <div>
       <h1>give feedback</h1>
+      <br/>
       <Button handleClick={ClickGood} text="good"/>
       <Button handleClick={ClickNeutral} text="neutral"/>
       <Button handleClick={ClickBad} text="bad"/>
@@ -32,6 +34,7 @@ const App = () => {
         : <Statistics good={good} neutral={neutral} bad={bad}/>
       }
     </div>
+    </center>
   )
 }
 

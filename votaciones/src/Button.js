@@ -1,6 +1,8 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const Button = (props) => {
     return(
-        <button onClick={props.handleClick}>{props.text}</button>
+        <button class="btn btn-warning" onClick={props.handleClick}>{props.text}</button>
     )
 }
 
