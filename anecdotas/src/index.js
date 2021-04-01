@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const anecdotes = [
@@ -59,16 +60,18 @@ const App = () => {
   }
   
   return (
+    <center>
     <div>
       <h1>Anecdota del día</h1>
       {vote[selected].anecdota}
       <p>has {vote[selected].vote} votes</p>
-      <button onClick={votescount}>vote</button>
-      <button onClick={random}>next anecdote</button>
+      <button class="btn btn-warning" onClick={votescount}>vote</button>
+      <button class="btn btn-warning" onClick={random}>next anecdote</button>
       <h2>Anecdota con más votos</h2>
       {max.anecdota}
       <p>has {max.vote} votes</p>
     </div>
+    </center>
   )
 }
 
