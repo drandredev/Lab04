@@ -19,13 +19,17 @@ const App = () => {
   }
 
 
+
   return (
     <div>
       <h1>give feedback</h1>
       <button onClick={ClickGood}>good</button>
       <button onClick={ClickNeutral}>neutral</button>
       <button onClick={ClickBad}>bad</button>
-      <Statistics good={good} neutral={neutral} bad={bad}/>
+      {!good & !neutral & !bad
+        ? <p>No feedback given</p>
+        : <Statistics good={good} neutral={neutral} bad={bad}/>
+      }
     </div>
   )
 }
